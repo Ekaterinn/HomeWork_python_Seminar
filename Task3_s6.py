@@ -11,11 +11,8 @@ def greaterCommonDivisor(m: int, n: int):
      
 def task():
     result = []    
-    # Перебираем знаменатели:
     for i in range(2,12):
-        # Перебираем числители от 1 до i, т.к. дроби менее 1
         for j in range(1, i):
-            # признак несократимой дроби: НОД = 1
             if greaterCommonDivisor(i, j) == 1:   
                 result.append(str(j) + '/' + str(i))
     return result  
